@@ -1,0 +1,10 @@
+\begin{answer}
+Note that
+$$l(\theta) = - (\sum\limits_{k = 1}^{m }(b(y^{(k)})  + y^{(k)}\theta^T x^{(k)} - a(\theta^Tx^{(k)})).$$
+Let us calculate the partial derivatives. For any $i, j$
+$$\frac{\partial^2 l}{\partial \theta_i\partial \theta_j} =
+\sum\limits_{k = 1}^{m }a''(\theta^T x^{(k)})x_i^{(k)}x_j^{(k)}. $$
+We saw that $a''(\theta^Tx) = a''(\eta) = Var(y;\eta) >=0.$
+Hence the positive semi-definiteness of the Hessian can be shown exactly as in part Problem 1(a) (there, we had $g' >= 0.$)
+
+\end{answer}

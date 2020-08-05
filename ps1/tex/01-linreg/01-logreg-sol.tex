@@ -1,0 +1,28 @@
+\begin{answer}
+Throughout the problem set $(a,b)$ denoted the inner(dot) product of the vectors $a,b.$
+It is easy to see that for the logistic function $g(z)$, we have $g'(z)= g(z)(1- g(z)).$ We use this to calculate the partial derivative of the loss functions. 
+$$\frac{\partial h_{\theta}(x)}{\partial \theta_i} = \frac{\partial g(\theta^Tx)}{\partial \theta_i} = g(\theta^Tx) (1 - g(\theta^Tx))
+\frac{\partial}{\partial\theta_i}(\theta^Tx) = h_{\theta}(x) (1 - h_{\theta}(x)) x_i$$
+Hence,
+
+$$\frac{\partial log(h_{\theta}(x))}{\partial \theta_i} = \frac{h'_{\theta}(x)}{h_{\theta}(x)} = (1 - h_{\theta}(x))x_i.$$
+Similarly,
+
+$$\frac{\partial (1 - log(1 - h_{\theta}(x)))}{\partial \theta_i} = - \frac{h'_{\theta}(x)}{1 - h_{\theta}(x)} = -h_{\theta}(x)x_i.$$
+
+Using the above computations and some simplification we obtain the partial derivative of the loss function wrt $i-$th component.
+$$\frac{\partial J(\theta)}{\partial \theta_i} = - \frac{1}{m}\sum_{k = 1}^{m }x_i^{(k)}( y^{(k)} - h_{\theta}(x^{(k)})). \eqno(1)$$
+
+Note that the above sum can conveniently be expressed in the form of inner product and we will use such form in the coding part using numpy's dot operation.
+
+The formula (1)  allow us to easily find the entries of the Hessian.
+
+$$\frac{\partial^2 J(\theta)}{\partial \theta_i \partial\theta_j} = 
+\frac{1}{m}\sum_{k = 0}^{m - 1}g'(\theta^Tx^{(k)}))x_i^{(k)}x_j^{(k)}. \eqno(2)$$
+Thus, the $(i,j)-$ th entry  of the Hessian matrix is given by the right hand side of (2).
+Now we show that the Hessian is positive semi-definite. Below $(a,b)$ denotes the inner product of $a$ and $b.$
+$$z^THz = (Hz,z)=  \sum_{i,j}\sum_{k = 1}^{m}g'(\theta^Tx^{(k)})x_i^{(k)}x_j^{(k)}z_iz_j=  \sum_{k = 1}^m\sum_{i,j}g'(\theta^Tx^{(k)})x_i^{(k)}x_j^{(k)}z_iz_j$$
+$$= \sum_{k = 1}^m g'(\theta^Tx^{(k)}) (x^Tz)^2 \ge 0.$$
+as the logistic function is non -decreasing so its derivative is non-negative (or $g' = g(1-g)\ge 0$).
+
+\end{answer}

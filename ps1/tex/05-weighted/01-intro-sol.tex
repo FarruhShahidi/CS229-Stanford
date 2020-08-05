@@ -1,0 +1,22 @@
+\begin{answer}
+
+i. Note that $\sum((\theta^Tx^{(i)} - y^{(i)})^2) = (X\theta - y)^T (X\theta - y),$ thus $W$ must be a diagonal matrix whose $(i,i)-$ the entry is $(1/2)\omega^{(i)}.$ We can write in the following notation.
+$$W = (1/2)diag[\omega^{(1)}, \omega^{(2)}, \cdots, \omega^{(m)}].$$
+\\
+
+ii. Let's expand $J(\theta)$
+$$J(\theta) = \theta^TX^TWX\theta - \theta^tX^TWy - y^TWX\theta + y^TWy $$
+$$= \theta^TX^TWX\theta - 2\theta^T X^TWy + y^TWy.$$
+Note that $\frac{\partial(\theta^T const)}{\partial \theta} = const.$
+Therefore,
+$$\frac{\partial J}{\partial \theta} = 2X^TWX\theta - 2y^TW^TX= 0$$
+and 
+$$\theta = (X^T WX)^{-1}y^TWX.$$
+
+iii. Evaluate the negative log likelihood
+$$l(\theta) = - (\sum - \log(\sqrt{2\pi} (\sigma^{(i)})^2) - \frac{(\theta^T x^{(i)} - y^{(i)})^2}{2(\sigma^{(i)})^2}). $$
+To minimize the above (ignore the constant term) we need to minimize
+$$J(\theta) = \frac{(\theta^T x^{(i)} - y^{(i)})^2}{2(\sigma^{(i)})^2}$$
+from which we find
+$$\omega^{(i)} = \frac{1}{(\sigma^{}(i))^2}.$$
+\end{answer}

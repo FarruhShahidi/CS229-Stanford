@@ -1,0 +1,12 @@
+\begin{answer}
+The sum runs from 1 to $m-$ the number of examples. Recall for a GLM we have $\eta = \theta^T x.$
+
+$$l(\theta) = \sum(\log p(y^{(i)} | x^{(i)}; \theta)) = 
+\sum(y^{(i)}\theta^T x^{(i)} -a(\theta^T x^{(i)}) - log(y^{(i)}!)).$$
+Compute the partial derivative
+$$\frac{\partial l}{\partial \theta_j}= \sum(y^{(i)} x_j^{(i)} - a(\theta^T x^{(i)}) x_j^{(i)}).$$
+Using the partial derivative we update the parameters:
+
+$$\theta_j = \theta_j + \alpha (y^{(i)}  - a(\theta^T x^{(i)})) x_j^{(i)}$$
+where the function $a$ is defined as before.
+\end{answer}

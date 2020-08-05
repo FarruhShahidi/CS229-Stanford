@@ -1,0 +1,9 @@
+\begin{answer}
+Differentiate $a'(\eta)= E(y;\eta)$ wrt $\eta$
+
+$$a''(\eta) = \frac{\partial}{\partial\eta}\int yp(y;\eta)dy =
+\int \frac{\partial}{\partial\eta}yp(y;\eta) dy =  $$
+$$= \int y p(y;\eta)(y - a'(\eta)) dy = \int y^2p(y;\eta) dy - 
+a'(\eta)\int y p(y;\eta)dy$$
+$$= E(y^2; \eta) - E(y; \eta) E(y; \eta) = Var(y;\eta).$$
+\end{answer}

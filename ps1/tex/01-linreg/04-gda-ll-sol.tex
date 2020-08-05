@@ -1,0 +1,22 @@
+\begin{answer}
+The product and the sums run from  1 to m, so for simplicity I drop the limits. Note that
+$$l = \log\prod p(y^{(i)}| x^{(i)})p(y{(i)}) = \sum\log p(y^{(i)}| x^{(i)})p(y{(i)}) = $$$$
+ -m\log(\sigma) + c_0 - \sum\big( y^{(i)}\frac{(x^{(i)} - \mu_0)^2}{2\sigma^2} + (1- y^{(i)})\frac{(x^{(i)} - \mu_1)^2}{2\sigma^2}\big) + \sum(y^{(i)}\phi + (1-y^{(i)})(1-\phi)).$$
+ 
+ Now we calculate the partial derivatives.
+ 
+ $$\frac{\partial}{\partial\phi} = \sum(\frac{y^{(i)}}{\phi} + \frac{1- y^{(i)}}{1-\phi}) = 0.$$
+ The numerator after the sum is then $\sum y^{(i)} - m\phi$ and so
+ $$\phi= \frac{\sum y^{(i)}}{m}.$$
+ Not that the formula is exactly as the formula given in the problem because if $y^{(i)} = 0$ the $i-$th term of the sum is $0.$ Hence this formula can be represented with the characteristic function. I will not be re-writing this as well as the problems below as I do not know how useful it may be in the coding part.
+ Further derivatives (enough to show $\mu_0$):
+ $$\frac{\partial l}{\partial\mu_0} =\sum\frac{y^{(i)}(x^{(i)} - \mu_0 )}{\sigma^2} = \frac{\sum x^{(i)}y^{(i)} - \mu_0\sum y^{(i)}}{\sigma^2}.$$
+ Hence we obtain
+ $$\mu_0 = \frac{\sum x^{(i)}y^{(i)}}{\sum y^{(i)}}.$$
+ Finally, 
+ $$\frac{\partial l}{\partial \sigma} = \frac{m}{\sigma} - \frac{1}{\sigma^3}(\sum\big( y^{(i)}\frac{(x^{(i)} - \mu_0)^2}{2\sigma^2} + (1- y^{(i)})\frac{(x^{(i)} - \mu_1)^2}{2\sigma^2}\big)).$$
+ By solving this equation for $\sigma$ we obtain the desired result.
+ 
+ 
+ 
+\end{answer}
