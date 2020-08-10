@@ -1,0 +1,14 @@
+\begin{answer}
+i. One can represent $\theta $ as a linear combination of the functions $\phi(x^{(i)})$:
+$$\theta = \sum\limits_{j = 1}^m \beta_j\phi(x^{(j)})$$
+where, say m is the number of training, examples. In fact, one can the the sum up to $i$ in the
+$i-$th update of $\theta.$
+ii. All the $\theta^{(i)}$ are known and also using the formula $\beta_{i + 1}$ one can evaluate
+$\\phi^{(i + 1)}.$
+
+iii. Using the above formula for the update and writing $\theta$
+as a linear combination as in the (i), we observe that during the $(j)-$the update only the coefficient
+$\beta_j$ gets updated while other coefficients stay intact. More, precisely, that coefficient changes
+from 0 to the coefficient of $\phi(x^{(j)})$ and hence
+$$\beta_j = \alpha (y^{(j + 1)} - sign(\theta^{(j)T})x^{(j + 1)})$$
+\end{answer}

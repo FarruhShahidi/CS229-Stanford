@@ -1,0 +1,17 @@
+\begin{answer}
+(a)The sum of symmetric matrices is symmetric and the sum of PSD matrices is PSD. So it is a kernel\\
+
+(b) While the difference is symmetric, $K_2$ may be larger than $K_1$, so the difference is not a kernel.\\
+(c) Since a is positive them $K$ is symmetric and PSD, so it is a kernel\\
+(d) Symmetric but not PSD, hence not a kernel.\\
+(e) Obviously, the product is symmetric. Here we can use a general statement in math
+which says that the product of symmetric PSD matrices is PSD. The proof is not that difficult, it deals
+with the square root matrix, but I am not going to write it here.
+(f) Obviously, K is symmetric as $f(x)f(z) = f(z)f(x)$. Note that 
+$$z^TKz = \sum\limits_{i,j = 1}^m z_i K_{i,j}z_j = \sum\limits_{i,j = 1}^m z_i f(x^{(i)})f(x^{(j)})z_j =  (z^TF(x))^2 \ge 0$$
+where $F(x)_i = f(x^{(i)}).$\\
+(g) This one simply follows that $K_3$ is symmetric and positive semidefinite.\\
+
+(h) Any polynomial $p(x)$ of x is obtained by summing, multiplying x to itself and by multiplying to a constant number.
+In this case $p$ has positive coefficients, hence by combining (a), (c) and (e) we obtain the desired result.
+\end{answer}

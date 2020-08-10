@@ -1,0 +1,13 @@
+\begin{answer}
+we use the formula from the part (a) and observe that the argmax is the same as argmin of the negative log.
+By the assumption
+$p(\theta) = \frac 1{2\pi^{\frac n2}\eta^n}exp(-\frac{||\theta||^2}{\eta^2})$
+and so
+$-\log p(\theta) = const + \frac 1{2\eta^2}||\theta^2||.$
+
+Thus,
+
+$$\theta_{\text{MAP}} = \arg\min_\theta - \log p(y|x,\theta) + \lambda||\theta||^2_2$$
+where
+$\lambda = \frac 1{2\eta^2}||\theta^2||.$
+\end{answer}

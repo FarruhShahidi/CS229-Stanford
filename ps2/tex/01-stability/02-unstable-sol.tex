@@ -1,0 +1,9 @@
+\begin{answer}
+It seems that the grad function does not get smaller as we iterate $\theta.$ From the formula for prob
+$\text{prob} = \frac{1]{1 + exp(Y\theta^TX)}$ if the exponent is negative then the probability is close to 1
+and the loss function(which is the product of probabilities ) does not get smaller. By looking at the raw dataset
+b(compared to the dataset a), the negative examples are mostly in the lower triangle (defined by the equation x + y =1 ) and
+the positive examples are in the upper triangle. Plotting may be a better idea to visualize this. So I suspect being linearly separable
+for dataset does not allow the loss function to get smaller.
+
+\end{answer}

@@ -1,0 +1,11 @@
+\begin{answer}
+Again, we use the part (a). Since $p(y|\theta, x)$ is normal we have
+$$\theta_{MAP} = argmin - \log(p(y|\theta, x)) - \log p(\theta)=
+- \frac 1{2\sigma^2} (X\theta - y)^T(X\theta - y) - frac 1{2\eta^2}||\theta||^2.$$
+Now, we take the derivative of the left-hand-side and solve for $\theta:$
+$$-\frac 1{\sigma^2}(X^TX\theta - X^Ty) - \frac 1{\eta^2}\theta) = 0$$
+hence,
+$$(X^TX + \frac{\sigma^2}{\eta^2}I)\theta = X^Ty$$
+so.
+$$\theta = (X^TX + \frac{\sigma^2}{\eta^2}I)^{-1}X^Ty$$
+\end{answer}
