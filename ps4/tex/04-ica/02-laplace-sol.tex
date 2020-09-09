@@ -1,0 +1,27 @@
+\begin{answer}
+   By replacing with the Laplace density, we get
+$$
+l(W) = \sum_{i=1}^m(\log |W| + \sum_{j=1}^m(c - |w^T_jx^{(i)}|)).
+$$
+In order to evaluate the gradient, we consider cases when the absolute value positive and negative.:
+$$
+sign^{(i)}_j = \begin{cases}
+1, &w_j^Tx^{(i)} >0\\
+-1, &w^T_jx^{(i)}\le 0
+\end{cases}
+$$
+
+Now we have
+$$
+\begin{aligned}
+\nabla_Wl(W) &= \sum_{i=1}^m (W^{-1T} -  sign^{(i)}x^{(i)T})
+\end{aligned}
+$$
+
+We can write a vectorized update
+
+$$
+W:= W + \alpha(W^{-1T}  - Sign x^T)
+$$
+where Sign is a vector consisting of $sign^{(i)}$'s.
+\end{answer}

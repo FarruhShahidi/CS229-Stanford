@@ -1,0 +1,29 @@
+
+\begin{answer}
+\begin{enumerate}
+    \item 
+        When we write the difference $\|B(V_1) - B(V_2)\|_\infty$ the $R(s)$ term cancel out.
+        From the second term we can factor out $\gamma$ then we note that the transition probabilities are bounded by 1.
+        Hence, we get the desired result.  $\|B(V_1) - B(V_2)\|_\infty \le \gamma \|V_1 - V_2\|_\infty$
+\item 
+	The Banach Fixed point theorem states that a contracting operator (in (a) we actually proved that $B$ is a contracting operator)
+	in a complete metric space(in the current situation MDP is defined in finite state and action spaces) has a unique fixed point.\\
+	
+	But the statement can easily be proved without recalling the general statement. If we have two fixed points $V_1$ and $V_2$ , then
+$$
+\|B(V_1) - B(V_2)\|_\infty \le \gamma \|V_1 - V_2\|_\infty
+$$
+implies
+
+$$
+\|V_1 - V_2\|_\infty \le \gamma \|V_1 - V_2\|_\infty
+$$
+which is only possible when $V_1 = V_2$ since $\gamma < 1$. 
+
+
+
+
+
+
+\end{enumerate}
+\end{answer}

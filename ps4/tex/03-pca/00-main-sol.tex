@@ -1,0 +1,19 @@
+\begin{answer}
+Note that the projection onto the span of $u$ is given by $x^Tu.$ Thus, $f_u(x) = uu^Tx.$
+Note that
+$$||x - f_u(x)||_2^2 =  ||x - uu^Tx||_2^2 =  (x - uu^Tx)^T(x - uu^Tx) = $$
+$$= (x^T - x^Tuu^T)(x - uu^Tx) = x^Tx - x^Tuu^Tx - x^Tuu^Tx^T = x^Tuu^Tuu^Tx=$$
+$$= x^Tx - x^Tuu^Tx$$
+After applying the above computation for all examples $x^{(i)}$ and summing it over we see that minimizing the required quantity is
+equivalent to maximing
+
+$$
+\sum_{i=1}^m u^Tx^{(i)}x^{(i)T}u = u^T(\sum_{i=1}^mx^{(i)}x^{(i){^T}}) u
+$$
+From the lecture//lecture notes we see that maximizing the above is equivalent to finding the largest eigenvalue of the empirical covariance matrix. QED.
+
+
+
+
+
+\end{answer}
