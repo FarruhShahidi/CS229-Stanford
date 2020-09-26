@@ -1,0 +1,38 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  19 AUG 2020 11:12
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**00-main.tex
+(./00-main.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+
+./00-main.tex:2: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \item \points
+                 {20} {\bf A Simple Neural Network}
+? 
+./00-main.tex:2: Emergency stop.
+ ...                                              
+                                                  
+l.2 \item \points
+                 {20} {\bf A Simple Neural Network}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 492649
+ 290 string characters out of 6129622
+ 56400 words of memory out of 5000000
+ 3989 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 7i,0n,7p,61b,19s stack positions out of 5000i,500n,10000p,200000b,80000s
+./00-main.tex:2:  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,11 @@
+\begin{answer}
+    Use the fact the the distribution $p(y;\theta)$ integrate to 1 and take $\nabla$ out of the integration.
+    $$
+    \begin{aligned}
+        E_{y\sim p(y;\theta)}[\nabla_{\theta'}\log p(y;\theta')|_{\theta' = \theta}] &= \int_{-\infty}^{\infty}p(y;\theta)(\nabla_{\theta'}\log p(y;\theta')|_{\theta' = \theta}) dy \\
+        &= \int_{-\infty}^{\infty}p(y;\theta)\frac{1}{p(y;\theta)} \nabla_\theta p(y;\theta)dy\\
+        &= \nabla_\theta \int_{-\infty}^{\infty}p(y;\theta)dy = 0
+    \end{aligned}
+    $$
+
+\end{answer}

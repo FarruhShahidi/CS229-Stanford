@@ -1,0 +1,13 @@
+\begin{answer}
+Write $f(x) = D_{KL }(p_\theta\|p_x)$ and approximate $f(\theta + d) = f(\theta) + d^T\nabla(f(\theta)) + d^T\nabla^2(f(\theta))d$
+We have
+
+$$
+\begin{aligned}
+D_{KL }(p_\theta\|p_{ \theta + d})&\approx D_{KL}(p_\theta\| p_{\theta}) + (d)^T\nabla_{\theta'}D_{KL}(p_\theta\| p_{\theta'}} +  \frac{1}{2}d^T\mathcal I(\theta) d
+(
+&=  \frac{1}{2}d^T\mathcal I(\theta) d
+\end{aligned}
+$$
+This is because the first term in the above sum is clearly 0, and the second term is zero according to part (b).
+\end{answer}

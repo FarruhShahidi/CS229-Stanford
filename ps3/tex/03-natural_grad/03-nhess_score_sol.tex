@@ -1,0 +1,7 @@
+\begin{answer}
+	For simplicity let $p = p(y;\theta).$ 
+	Note that 
+	$$-\nabla^2(\log p) = -\nabla (\frac{\nabla p}{p}) = \frac{\nabla^2(p)}{p^2} - \frac{(\nabla p)^2}{p} = (\nabla (\log p))^2 - \frac{(\nabla p)^2}{p}$$
+	The second term of the above becomes zero when multiplied and then integrated. When the first term is multiplied by $p$ and integrated,
+	this becomes exactly the Fisher information \mathcal{I}(\theta).
+\end{answer}

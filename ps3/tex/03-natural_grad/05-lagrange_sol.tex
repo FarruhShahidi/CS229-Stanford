@@ -1,0 +1,41 @@
+\begin{answer}
+For simplicity we write  $\nabla_{\theta}l(\theta) =\nabla_{\theta'}l(\theta)|_{\theta' = \theta}. $
+Using Taylor we have
+$$
+l(\theta+ d) \approx l(\theta) + d^T\nabla_{\theta}l(\theta)
+$$
+We can construct the Lagrangian for this optimization problem as
+$$
+\begin{aligned}
+\mathcal L(d, \lambda) &= l(\theta+d)  - \lambda[D_{KL}(p_{\theta}\|p_{\theta + d}) - c]\\
+&= l(\theta) + d^T\nabla_{\theta}l(\theta) - \lambda[\frac{1}{2}d^T\mathcal I(\theta)d - c]
+\end{aligned}
+$$
+By using the Lagrange multiplier method we have
+$$
+\begin{aligned}
+\frac{\partial \cal L}{\partial d} &=  \nabla_{\theta}l(\theta) - \lambda \mathcal I(\theta)d = 0\\
+\frac{\partial \cal L}{\partial \lambda} &= \frac{1}{2}d^T\mathcal I(\theta) d - c = 0
+\end{aligned}
+$$
+We find $d$ from the first equation
+$$
+d = \frac{1}{\lambda}\mathcal I(\theta)^{-1}\nabla_{\theta'}l(\theta)
+$$
+We plug in the above $d$ into the second equation.
+
+
+$$
+\frac{1}{2}(\frac{1}{\lambda^2}(\mathcal I(\theta)^{-1})^T\nabla^T_{\theta}l(\theta)\mathcal I(\theta)\mathcal I(\theta)^{-1}\nabla_{\theta}l(\theta) = c
+$$
+Solve for $\lambda$
+$$
+\lambda = \sqrt{\frac{1}{2c}(\nabla^T_{\theta}l(\theta)\mathcal I(\theta)^{-1} \nabla_{\theta}l(\theta))}
+$$
+Now, we find $d^{*}$
+$$
+d^{*} =\sqrt{\frac{2c}{\nabla^T_{\theta}l(\theta)\mathcal I(\theta)^{-1} \nabla_{\theta}l(theta)}}\mathcal I(\theta)^{-1}\nabla_{\theta}l(\theta).
+$$
+
+
+ \end{answer}

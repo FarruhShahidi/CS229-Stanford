@@ -1,0 +1,12 @@
+\begin{answer}
+  Yes, it is possible. If we look at the picture of the dataset we, can see that all the 'o' labels are within the intersection of the lines(which forms a triangle)
+ 
+Let $A$ be a boolean given by $A = (x_1 > 0.5) \& (x_2 > 0.5))\& (x_1 + x_2 < 4).$
+We want to choose the weights and the biases such that $A = 1$ if and only if $o = 1.$
+If we set $h _1 = f(2x_1 - 1),\ \ h_2 = f(2x_2 - 1),\ \  h_3 = f(-x_1 - x_2 + 4)$ (by choosing the weights and biases accordingly)
+we see that $A = 1$ implies that $h_1 = 1 \& h_2 = 1 \& h_3 = 1$ and $A = 0$ implies that $h_1h_2h_3 = 0.$
+Now we set $o = f(2h_1 + 2h_2 + 2h_3 - 5).$ Now if $A = 1$, then $h_1 = h_2 = h_3 = 1$ and hence $o = 1.$
+If $A = 0$ then since at least one of the $h_i's$ is 0  one has $2h_1 + 2h_2 + 2h_3 - 5 < 0$ and so $o = 0.$ 
+
+
+ \end{answer}
